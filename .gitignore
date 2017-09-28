@@ -8,3 +8,5 @@ sample.txt
 .ipynb_checkpoints/02.Containers-checkpoint.ipynb
 
 .ipynb_checkpoints/03.ParallelComputation-checkpoint.ipynb
+
+*.txt
