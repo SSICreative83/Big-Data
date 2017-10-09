@@ -1,12 +1,3 @@
-
-sample.txt
-
-.ipynb_checkpoints/01.MapReduce-checkpoint.ipynb
-
-.ipynb_checkpoints/02.Parallelism-checkpoint.ipynb
-
-.ipynb_checkpoints/02.Containers-checkpoint.ipynb
-
-.ipynb_checkpoints/03.ParallelComputation-checkpoint.ipynb
-
+.ipynb_checkpoints/
 *.txt
+data/
