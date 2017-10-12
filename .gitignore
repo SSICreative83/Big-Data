@@ -1,3 +1,5 @@
 .ipynb_checkpoints/
 *.txt
 data/
+03.ParallelComputation.slides.html
+02.Containers.slides.html
