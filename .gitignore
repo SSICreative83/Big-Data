@@ -7,3 +7,6 @@
 mydask.png
 06.Unix.Commands.slides.html
 test_stdin.py
+words.py
+mapper.py
+reducer.py
