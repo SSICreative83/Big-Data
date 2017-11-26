@@ -1,6 +1,7 @@
 name: big-data
 channels:
   - conda-forge
+  - bioconda
   - defaults
 dependencies:
   - python=3.6
@@ -9,8 +10,9 @@ dependencies:
   - joblib 
   - ujson
   - dask
-  - java
+  - java-jdk
   - pyspark
+  - java-jdk
   - graphviz
   - python-graphviz
   - beautifulsoup4
