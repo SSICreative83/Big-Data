@@ -19,3 +19,5 @@ dependencies:
   - toolz 
   - h5py 
   - partd
+  - matplotlib
+  - seaborn
