@@ -24,3 +24,5 @@ sample*.txt
 file_list.txt
 output.txt
 user.txt
+
+local-file.txt
