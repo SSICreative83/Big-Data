@@ -10,6 +10,7 @@ dependencies:
   - joblib 
   - ujson
   - dask
+  - pytables
   - java-jdk
   - pyspark
   - java-jdk
