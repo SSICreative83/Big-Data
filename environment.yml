@@ -21,3 +21,13 @@ dependencies:
   - partd
   - matplotlib
   - seaborn
+  - hdfs3
+  - progressbar2
+  - pyarrow
+  - feather-format
+  - fastparquet
+  - distributed
+  - pip
+  - pip:
+    - loky
+    - toyplot
