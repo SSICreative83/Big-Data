@@ -10,7 +10,7 @@ Notebooks for Master of Data Science Rennes
   * [Python for Data Analysis](https://github.com/wesm/pydata-book) by Wes McKinney.
   * [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook) by Jake VanderPlas
   
-### Sofware documentation
+### Software documentation
   * [Pandas website](http://pandas.pydata.org).
   * [Dask website](https://dask.pydata.org/)
   * [PySpark](http://spark.apache.org/docs/latest/api/python/index.html)
