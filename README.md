@@ -11,11 +11,15 @@ Notebooks for Master of Data Science Rennes
   * [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook) by Jake VanderPlas
   
 ### Software documentation
-  * [Pandas website](http://pandas.pydata.org).
-  * [Dask website](https://dask.pydata.org/)
+  * [Pandas](http://pandas.pydata.org).
+  * [Dask](https://dask.pydata.org/)
   * [PySpark](http://spark.apache.org/docs/latest/api/python/index.html)
   * [Apache Arrow](https://arrow.apache.org/docs/python/index.html)
   * [Parquet](https://parquet.apache.org)
+  * [GCSFS] (http://gcsfs.readthedocs.io/en/latest/)
+  * [Dask.distributed](https://distributed.readthedocs.io/en/latest/)
+  * [fastparquet](https://fastparquet.readthedocs.io/en/latest/)
+  * [hdfs3](http://hdfs3.readthedocs.io/en/latest/)
 
 ### Tutorials
   * [Analyzing and Manipulating Data with Pandas Beginner](https://youtu.be/6ohWS7J1hVA): SciPy 2016 Tutorial by Jonathan Rocher.
