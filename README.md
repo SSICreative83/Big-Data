@@ -25,7 +25,6 @@ Notebooks for Master of Data Science Rennes
   * [Parallel Python: Analyzing Large Datasets Intermediate](https://www.youtube.com/watch?v=5Md_sSsN51k), SciPy 2016 Tutorial by Matthew Rocklin.
 
 ### Blog posts
-  * [Laurent Gautier](https://github.com/lgautier/pragmatic-polyglot-data-analysis)
   * [Should you replace Hadoop with your laptop?](http://veekaybee.github.io) by Vicki Boykis
   * [Implementing MapReduce with multiprocessing](https://pymotw.com/2/multiprocessing/mapreduce.html)
 
