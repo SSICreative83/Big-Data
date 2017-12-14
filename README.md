@@ -3,6 +3,7 @@ Notebooks for Master of Data Science Rennes
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/pnavaro/big-data/master)
 
+You can run these notebooks with Docker and [Jupyter All Spark](https://github.com/jupyter/docker-stacks/tree/master/all-spark-notebook)
 
 ## References
 
