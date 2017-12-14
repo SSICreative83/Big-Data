@@ -1,0 +1,8 @@
+01.MapReduce.ipynb
+02.Containers.ipynb
+03.ParallelComputation.ipynb
+04.AsynchonousProcessing.ipynb
+05.UnixCommands.ipynb
+06.Hadoop.ipynb
+07.PySpark.ipynb
+08.Dask.ipynb
