@@ -1,25 +1,20 @@
-FROM rocker/binder:3.4.2
+FROM rocker/binder
 
-# Copy repo into ${HOME}, make user own $HOME
+MAINTAINER Pierre Navaro <pierre.navaro@univ-rennes1.fr>
+
 USER root
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     default-jdk \
     ssh \
-    gcc && apt-get clean && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 COPY . ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
 
 USER $NB_USER
-
-# Install Anaconda and Jupyter
-RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-RUN bash Miniconda3-latest-Linux-x86_64.sh -b &&
-    rm Miniconda3-latest-Linux-x86_64.sh
-ENV PATH $HOME/miniconda3/bin:$PATH
 
 # conda-forge packages
 RUN conda install --quiet --yes -c conda-forge \
