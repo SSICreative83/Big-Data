@@ -3,6 +3,16 @@ Notebooks for Master of Data Science Rennes
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/pnavaro/big-data/master)
 
+## Run Jupyter notebooks with docker
+
+You can run these notebooks with Docker and [Jupyter All Spark](https://github.com/jupyter/docker-stacks/tree/master/all-spark-notebook)
+
+The following command starts a container with the Notebook server listening for HTTP connections on port 8888 without authentication configured.
+
+```
+git clone https://github.com/pnavaro/big-data.git
+docker run -d -v $HOME/big-data:/home/jovyan/work -p 8888:8888 -p 4040:4040 jupyter/all-spark-notebook
+```
 
 ## References
 
