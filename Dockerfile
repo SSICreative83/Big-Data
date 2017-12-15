@@ -1,16 +1,11 @@
-# Copyright (c) Jupyter Development Team.
-# Distributed under the terms of the Modified BSD License.
-FROM jupyter/pyspark-notebook
+FROM rocker/binder:3.4.2
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
-
+# Copy repo into ${HOME}, make user own $HOME
 USER root
+COPY . ${HOME}
+RUN chown -R ${NB_USER} ${HOME}
+USER ${NB_USER}
 
-# RSpark config
-ENV R_LIBS_USER $SPARK_HOME/R/lib
-RUN fix-permissions $R_LIBS_USER
-
-# R pre-requisites
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     fonts-dejavu \
@@ -21,25 +16,44 @@ RUN apt-get update && \
 
 USER $NB_USER
 
-# R packages
-RUN conda install --quiet --yes \
-    'r-base=3.3.2' \
-    'r-irkernel=0.7*' \
-    'r-ggplot2=2.2*' \
-    'r-sparklyr=0.5*' \
-    'r-rcurl=1.95*' && \
+# bioconda packages
+RUN conda install --quiet --yes -c bioconda \
+    'java-jdk' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR
 
-# Apache Toree kernel
+# conda-forge packages
+RUN conda install --quiet --yes -c conda-forge \
+    'lorem' \
+    'dask' \
+    'pandas' \
+    'pytables' \
+    'pandas' \
+    'lorem' \
+    'joblib' \
+    'ujson' \
+    'dask' \
+    'pytables' \
+    'pyspark' \
+    'graphviz' \
+    'python-graphviz' \
+    'beautifulsoup4' \
+    'toolz' \
+    'h5py' \
+    'partd' \
+    'matplotlib' \
+    'seaborn' \
+    'hdfs3' \
+    'progressbar2' \
+    'pyarrow' \
+    'feather-format' \
+    'fastparquet' \
+    'distributed' \
+    'fastparquet' && \
+    conda clean -tipsy && \
+    fix-permissions $CONDA_DIR
+
 RUN pip install --no-cache-dir \
-    https://dist.apache.org/repos/dist/dev/incubator/toree/0.2.0/snapshots/dev1/toree-pip/toree-0.2.0.dev1.tar.gz \
+    toyplot \
     && \
-    jupyter toree install --sys-prefix && \
-    fix-permissions $CONDA_DIR
-
-# Spylon-kernel
-RUN conda install --quiet --yes 'spylon-kernel=0.4*' && \
-    conda clean -tipsy && \
-    python -m spylon_kernel install --sys-prefix && \
     fix-permissions $CONDA_DIR
