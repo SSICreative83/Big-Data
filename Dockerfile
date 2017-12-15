@@ -15,6 +15,12 @@ RUN chown -R ${NB_USER} ${HOME}
 
 USER $NB_USER
 
+# Install Anaconda and Jupyter
+RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+RUN bash Miniconda3-latest-Linux-x86_64.sh -b &&
+    rm Miniconda3-latest-Linux-x86_64.sh
+ENV PATH $HOME/miniconda3/bin:$PATH
+
 # conda-forge packages
 RUN conda install --quiet --yes -c conda-forge \
     'lorem' \
