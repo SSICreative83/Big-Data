@@ -27,9 +27,10 @@ RUN mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \
     chown -R $NB_USER /usr/local/hadoop && \
     fix-permissions /usr/local/hadoop
 
-EXPOSE 9000
-EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
+EXPOSE 9000 50010 50020 50070 50075 50090
+EXPOSE 19888 8030 8031 8032 8033 8040 8042 8088
+EXPOSE 49707 2122 22
+RUN /etc/init.d/ssh start
 
 COPY . ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
