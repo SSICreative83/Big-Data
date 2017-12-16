@@ -27,6 +27,7 @@ RUN mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \
     chown -R $NB_USER /usr/local/hadoop && \
     fix-permissions /usr/local/hadoop
 
+EXPOSE 9000
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
 
