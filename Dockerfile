@@ -15,7 +15,7 @@ RUN mkdir -p /opt/hadoop_store/hdfs/namenode && \
     
 # hadoop
 RUN curl -s http://apache.crihan.fr/dist/hadoop/common/hadoop-2.9.0/hadoop-2.9.0.tar.gz | tar -xz -C /usr/local/
-RUN rm hadoop-2.9.0.tar.gz && cd /usr/local && ln -s ./hadoop-2.9.0 hadoop
+RUN rm hadoop-2.9.0.tar && cd /usr/local && ln -s ./hadoop-2.9.0 hadoop
 
 ENV HADOOP_PREFIX /usr/local/hadoop
 
