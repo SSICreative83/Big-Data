@@ -17,12 +17,12 @@ RUN apt-get update && \
 COPY hadoop/* /tmp/
 
 RUN mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \
-    mv /tmp/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml && \ 
-    mv /tmp/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml && \
-    mv /tmp/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml && \
-    mv /tmp/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml && \
-    chmod +x $HADOOP_HOME/sbin/start-dfs.sh && \
-    chmod +x $HADOOP_HOME/sbin/start-yarn.sh && \
+    mv /tmp/hdfs-site.xml /usr/local/hadoop/etc/hadoop/hdfs-site.xml && \ 
+    mv /tmp/core-site.xml /usr/local/hadoop/etc/hadoop/core-site.xml && \
+    mv /tmp/mapred-site.xml /usr/local/hadoop/etc/hadoop/mapred-site.xml && \
+    mv /tmp/yarn-site.xml /usr/local/hadoop/etc/hadoop/yarn-site.xml && \
+    chmod +x /usr/local/hadoop/sbin/start-dfs.sh && \
+    chmod +x /usr/local/hadoop/sbin/start-yarn.sh && \
     chown -R $NB_USER /usr/local/hadoop && \
     fix-permissions /usr/local/hadoop
 
@@ -39,7 +39,7 @@ ENV HADOOP_HDFS_HOME /usr/local/hadoop
 ENV HADOOP_MAPRED_HOME /usr/local/hadoop
 ENV HADOOP_YARN_HOME /usr/local/hadoop
 ENV HADOOP_CONF_DIR /usr/local/hadoop/etc/hadoop
-ENV YARN_CONF_DIR $HADOOP_PREFIX/etc/hadoop
+ENV YARN_CONF_DIR /usr/local/hadoop/etc/hadoop
 ENV HADOOP_HOME=/usr/local/hadoop 
 ENV PATH=$PATH:/usr/local/hadoop/bin:/usr/local/hadoop/sbin 
 
