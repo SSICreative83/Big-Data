@@ -5,6 +5,10 @@ Notebooks for Master of Data Science Rennes
 
 ## Run Jupyter notebooks with docker
 
+### Get docker app
+ - [Mac](https://www.docker.com/docker-mac)
+ - [Windows](https://www.docker.com/docker-windows)
+
 You can run these notebooks with Docker. The following command starts a container with the Notebook 
 server listening for HTTP connections on port 8888 without authentication configured.
 
