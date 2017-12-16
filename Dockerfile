@@ -1,4 +1,4 @@
-FROM jupyter/all-spark-notebook
+FROM jupyter/minimal-notebook
 
 MAINTAINER Pierre Navaro <pierre.navaro@univ-rennes1.fr>
 
