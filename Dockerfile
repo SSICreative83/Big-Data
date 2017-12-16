@@ -86,7 +86,5 @@ RUN conda install --quiet --yes -c conda-forge \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR
 
-RUN pip install --no-cache-dir \
-    toyplot \
-    && \
+RUN pip install --no-cache-dir toyplot && \
     fix-permissions $CONDA_DIR
