@@ -56,33 +56,13 @@ RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
     
 # conda-forge packages
 RUN conda install --quiet --yes -c conda-forge \
-    'lorem' \
-    'dask' \
-    'pandas' \
-    'pytables' \
-    'pandas' \
-    'lorem' \
-    'joblib' \
-    'ujson' \
-    'dask' \
-    'pytables' \
-    'pyspark' \
-    'graphviz' \
-    'python-graphviz' \
-    'beautifulsoup4' \
-    'toolz' \
-    'h5py' \
-    'partd' \
-    'matplotlib' \
-    'seaborn' \
-    'hdfs3' \
-    'progressbar2' \
-    'pyarrow' \
-    'feather-format' \
-    'fastparquet' \
-    'distributed' \
-    'xlwt' \
-    'fastparquet' && \
+    'lorem' 'dask' 'pandas' 'pytables' 'pandas' \
+    'joblib' 'ujson' 'pyspark' \
+    'graphviz' 'python-graphviz' 'beautifulsoup4' \
+    'toolz' 'h5py' 'partd' 'matplotlib' 'seaborn' \
+    'hdfs3' 'progressbar2' 'pyarrow' \
+    'feather-format' 'fastparquet' 'distributed' \
+    'xlwt' 'fastparquet' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR
 
