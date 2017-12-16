@@ -4,7 +4,7 @@ MAINTAINER Pierre Navaro <pierre.navaro@univ-rennes1.fr>
 
 USER root
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends default-jdk python-software-properties ssh curl && \
+    apt-get install -y --no-install-recommends default-jdk python-software-properties ssh curl sudo && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /opt/hadoop_store/hdfs/namenode && \
@@ -12,7 +12,8 @@ RUN apt-get update && \
     chown -R $NB_USER /opt/hadoop_store      && \
     fix-permissions /opt/hadoop_store && \
     curl -s http://apache.crihan.fr/dist/hadoop/common/hadoop-2.9.0/hadoop-2.9.0.tar.gz | tar -xz -C /usr/local/ && \
-    cd /usr/local && ln -s ./hadoop-2.9.0 hadoop 
+    cd /usr/local && ln -s ./hadoop-2.9.0 hadoop && \
+    echo "jovyan ALL=NOPASSWD: ALL" >> /etc/sudoers
     
 COPY hadoop/* /tmp/
 
