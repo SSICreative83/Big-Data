@@ -26,7 +26,9 @@ RUN mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \
     chown -R $NB_USER /usr/local/hadoop && \
     fix-permissions /usr/local/hadoop
 
-#CMD [ "sh", "-c", "service ssh start; bash"]
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
+
 COPY . ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
 
