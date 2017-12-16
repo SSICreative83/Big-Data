@@ -61,6 +61,7 @@ RUN conda install --quiet --yes -c conda-forge \
     'feather-format' \
     'fastparquet' \
     'distributed' \
+    'xlwt' \
     'fastparquet' && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR
