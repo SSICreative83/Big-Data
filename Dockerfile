@@ -4,7 +4,7 @@ MAINTAINER Pierre Navaro <pierre.navaro@univ-rennes1.fr>
 
 USER root
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends default-jdk python-software-properties ssh && \
+    apt-get install -y --no-install-recommends default-jdk python-software-properties ssh curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
