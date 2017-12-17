@@ -30,4 +30,12 @@
    <name>dfs.datanode.data.dir</name>
    <value>file:/opt/hadoop_store/hdfs/datanode</value>
  </property>
+  <property>
+        <name>dfs.namenode.rpc-bind-host</name>
+        <value>0.0.0.0</value>
+    </property>
+    <property>
+        <name>dfs.namenode.servicerpc-bind-host</name>
+        <value>0.0.0.0</value>
+    </property>
 </configuration>
