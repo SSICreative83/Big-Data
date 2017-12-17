@@ -46,7 +46,7 @@ ENV PATH=$PATH:/usr/local/hadoop/bin:/usr/local/hadoop/sbin
 
 # ssh without key
 RUN ssh-keygen -t rsa -f /root/.ssh/id_rsa -P '' && \
-    cat ~/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+    cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 ADD hadoop/ssh_config /root/.ssh/config
 RUN /usr/local/hadoop/bin/hdfs namenode -format && \
