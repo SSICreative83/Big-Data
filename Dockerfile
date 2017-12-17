@@ -47,7 +47,7 @@ RUN ssh-keygen -t rsa -f /root/.ssh/id_rsa -P '' && \
     cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 ADD hadoop/ssh_config /root/.ssh/config
-RUN sed s/HOSTNAME/$HOSTNAME/ hadoop/core-site.xml > /usr/local/hadoop/etc/hadoop/core-site.xml
+RUN sed s/HOSTNAME/$HOSTNAME/ /tmp/core-site.xml > /usr/local/hadoop/etc/hadoop/core-site.xml
 RUN service ssh start && /usr/local/hadoop/bin/hdfs namenode -format && \
     $HADOOP_HOME/sbin/start-dfs.sh && \
     $HADOOP_HOME/sbin/start-yarn.sh 
