@@ -9,7 +9,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /opt/hadoop_store/hdfs/namenode && \
     mkdir -p /opt/hadoop_store/hdfs/datanode && \
-    chown -R $NB_USER /opt/hadoop_store      && \
     fix-permissions /opt/hadoop_store && \
     curl -s http://apache.crihan.fr/dist/hadoop/common/hadoop-2.9.0/hadoop-2.9.0.tar.gz | tar -xz -C /usr/local/ && \
     cd /usr/local && ln -s ./hadoop-2.9.0 hadoop && \
@@ -24,7 +23,6 @@ RUN mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \
     mv /tmp/yarn-site.xml /usr/local/hadoop/etc/hadoop/yarn-site.xml && \
     chmod +x /usr/local/hadoop/sbin/start-dfs.sh && \
     chmod +x /usr/local/hadoop/sbin/start-yarn.sh && \
-    chown -R $NB_USER /usr/local/hadoop && \
     fix-permissions /usr/local/hadoop
 
 EXPOSE 9000 50010 50020 50070 50075 50090
@@ -34,8 +32,6 @@ RUN /etc/init.d/ssh start
 
 COPY . ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
-
-USER $NB_USER
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
 ENV HADOOP_PREFIX /usr/local/hadoop
