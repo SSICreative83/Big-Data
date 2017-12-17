@@ -54,7 +54,7 @@ RUN service ssh start && /usr/local/hadoop/bin/hdfs namenode -format && \
 
 # conda-forge packages
 RUN conda install --quiet --yes -c conda-forge \
-    'lorem' 'dask' 'pandas' 'pytables' 'pandas' \
+    'lorem' 'dask' 'pandas' 'pytables'  \
     'joblib' 'ujson' 'pyspark' \
     'graphviz' 'python-graphviz' 'beautifulsoup4' \
     'toolz' 'h5py' 'partd' 'matplotlib' 'seaborn' \
