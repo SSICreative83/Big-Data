@@ -45,12 +45,14 @@ ENV HADOOP_HOME=/usr/local/hadoop
 ENV PATH=$PATH:/usr/local/hadoop/bin:/usr/local/hadoop/sbin 
 
 # ssh without key
-RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
-    cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys && \
-    /usr/local/hadoop/bin/hdfs namenode -format && \
+RUN ssh-keygen -t rsa -f /root/.ssh/id_rsa -P '' && \
+    cat ~/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+
+ADD hadoop/ssh_config /root/.ssh/config
+RUN /usr/local/hadoop/bin/hdfs namenode -format && \
     $HADOOP_HOME/sbin/start-dfs.sh && \
     $HADOOP_HOME/sbin/start-yarn.sh 
-    
+
 # conda-forge packages
 RUN conda install --quiet --yes -c conda-forge \
     'lorem' 'dask' 'pandas' 'pytables' 'pandas' \
