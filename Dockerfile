@@ -11,14 +11,12 @@ RUN apt-get update && \
     mkdir -p /opt/hadoop_store/hdfs/datanode && \
     fix-permissions /opt/hadoop_store && \
     curl -s http://apache.crihan.fr/dist/hadoop/common/hadoop-2.9.0/hadoop-2.9.0.tar.gz | tar -xz -C /usr/local/ && \
-    cd /usr/local && ln -s ./hadoop-2.9.0 hadoop && \
-    echo "jovyan ALL=NOPASSWD: ALL" >> /etc/sudoers
+    cd /usr/local && ln -s ./hadoop-2.9.0 hadoop
     
 COPY hadoop/* /tmp/
 
 RUN mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \
     mv /tmp/hdfs-site.xml /usr/local/hadoop/etc/hadoop/hdfs-site.xml && \ 
-    mv /tmp/core-site.xml /usr/local/hadoop/etc/hadoop/core-site.xml && \
     mv /tmp/mapred-site.xml /usr/local/hadoop/etc/hadoop/mapred-site.xml && \
     mv /tmp/yarn-site.xml /usr/local/hadoop/etc/hadoop/yarn-site.xml && \
     chmod +x /usr/local/hadoop/sbin/start-dfs.sh && \
@@ -49,7 +47,8 @@ RUN ssh-keygen -t rsa -f /root/.ssh/id_rsa -P '' && \
     cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 
 ADD hadoop/ssh_config /root/.ssh/config
-RUN /usr/local/hadoop/bin/hdfs namenode -format && \
+RUN sed s/HOSTNAME/$HOSTNAME/ hadoop/core-site.xml > /usr/local/hadoop/etc/hadoop/core-site.xml
+RUN service ssh start && /usr/local/hadoop/bin/hdfs namenode -format && \
     $HADOOP_HOME/sbin/start-dfs.sh && \
     $HADOOP_HOME/sbin/start-yarn.sh 
 
