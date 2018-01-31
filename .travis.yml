@@ -4,7 +4,7 @@ dist: trusty
 
 script: py.test tests.py
 
-install: pip install lorem jupyter
+install: pip install lorem jupyter beautifulsoup4
 
 cache: pip
 cache: ccache
