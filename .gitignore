@@ -31,3 +31,7 @@ sentences.txt
 books
 exam-2017-correction.pdf
 exam-2017-correction.slides.html
+.cache/v/cache/lastfailed
+2017/.cache/v/cache/lastfailed
+2017/derby.log
+2017/metastore_db/
