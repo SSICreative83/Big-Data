@@ -1,0 +1,13 @@
+language: python
+
+dist: trusty
+
+script: py.test
+
+install: pip install lorem
+
+cache: pip
+cache: ccache
+
+python:
+  - 3.6
