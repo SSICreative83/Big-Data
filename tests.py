@@ -39,3 +39,8 @@ def test_ipynb_2017_03():
     here = os.getcwd()
     nb, errors = _notebook_run(os.path.join(here,'2017'),'03.ParallelComputation.ipynb')
     assert errors == []
+
+def test_ipynb_2017_04():
+    here = os.getcwd()
+    nb, errors = _notebook_run(os.path.join(here,'2017'),'04.AsynchronousProcessing.ipynb')
+    assert errors == []    

@@ -4,7 +4,9 @@ dist: trusty
 
 script: py.test tests.py
 
-install: pip install lorem jupyter beautifulsoup4 lxml
+install: pip install lorem jupyter beautifulsoup4 lxml pandas \
+                     progressbar2 dask toolz pandas_datareader \
+                     tables
 
 cache: pip
 cache: ccache
