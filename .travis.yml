@@ -6,7 +6,7 @@ script: py.test tests.py
 
 install: pip install lorem jupyter beautifulsoup4 lxml pandas \
                      progressbar2 dask toolz pandas_datareader \
-                     tables
+                     tables cloudpickle
 
 cache: pip
 cache: ccache
