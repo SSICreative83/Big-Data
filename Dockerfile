@@ -12,7 +12,7 @@ USER $NB_USER
 
 RUN conda install --quiet --yes -c conda-forge \
     'lorem' 'dask' 'pandas' 'pytables'  \
-    'joblib' 'ujson' 'pyspark' \
+    'joblib' 'ujson'  \
     'graphviz' 'python-graphviz' 'beautifulsoup4' \
     'toolz' 'h5py' 'partd' 'matplotlib' 'seaborn' \
     'hdfs3' 'progressbar2' 'pyarrow' \

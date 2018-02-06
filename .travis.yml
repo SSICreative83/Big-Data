@@ -4,9 +4,10 @@ dist: trusty
 
 script: py.test tests.py
 
-install: pip install lorem jupyter beautifulsoup4 lxml pandas \
+install: pip install lorem jupyter beautifulsoup4 lxml pandas  \
                      progressbar2 dask toolz pandas_datareader \
-                     tables cloudpickle
+                     tables cloudpickle toyplot xlwt pyspark   \
+                     fastparquet pyarrow
 
 cache: pip
 cache: ccache
