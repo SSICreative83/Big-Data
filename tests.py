@@ -48,42 +48,42 @@ def test_ipynb_2017_05():
     nb, errors = _notebook_run('05.UnixCommands.ipynb')
     assert errors == []
 
-def test_ipynb_2017_06():
-    here = os.getcwd()
-    nb, errors = _notebook_run('06.Hadoop.ipynb')
-    assert errors == []
-
-def test_ipynb_2017_07():
-    here = os.getcwd()
-    nb, errors = _notebook_run('07.PySpark.ipynb')
-    assert errors == []
-
-def test_ipynb_2017_08():
-    here = os.getcwd()
-    nb, errors = _notebook_run('08.Dask.ipynb')
-    assert errors == []
-
-def test_ipynb_2017_09():
-    here = os.getcwd()
-    nb, errors = _notebook_run('09.PandasSeries.ipynb')
-    assert errors == []
-
-def test_ipynb_2017_10():
-    here = os.getcwd()
-    nb, errors = _notebook_run('10.DaskDataframes.ipynb')
-    assert errors == []
-
-def test_ipynb_2017_11():
-    here = os.getcwd()
-    nb, errors = _notebook_run('11.PySparkHadoop.ipynb')
-    assert errors == []
-
-def test_ipynb_2017_12():
-    here = os.getcwd()
-    nb, errors = _notebook_run('12.NYCTaxiCabTrip.ipynb')
-    assert errors == []
-
-def test_ipynb_2017_13():
-    here = os.getcwd()
-    nb, errors = _notebook_run('13.ExamCorrection.ipynb')
-    assert errors == []
+#def test_ipynb_2017_06():
+#    here = os.getcwd()
+#    nb, errors = _notebook_run('06.Hadoop.ipynb')
+#    assert errors == []
+#
+#def test_ipynb_2017_07():
+#    here = os.getcwd()
+#    nb, errors = _notebook_run('07.PySpark.ipynb')
+#    assert errors == []
+#
+#def test_ipynb_2017_08():
+#    here = os.getcwd()
+#    nb, errors = _notebook_run('08.Dask.ipynb')
+#    assert errors == []
+#
+#def test_ipynb_2017_09():
+#    here = os.getcwd()
+#    nb, errors = _notebook_run('09.PandasSeries.ipynb')
+#    assert errors == []
+#
+#def test_ipynb_2017_10():
+#    here = os.getcwd()
+#    nb, errors = _notebook_run('10.DaskDataframes.ipynb')
+#    assert errors == []
+#
+#def test_ipynb_2017_11():
+#    here = os.getcwd()
+#    nb, errors = _notebook_run('11.PySparkHadoop.ipynb')
+#    assert errors == []
+#
+#def test_ipynb_2017_12():
+#    here = os.getcwd()
+#    nb, errors = _notebook_run('12.NYCTaxiCabTrip.ipynb')
+#    assert errors == []
+#
+#def test_ipynb_2017_13():
+#    here = os.getcwd()
+#    nb, errors = _notebook_run('13.ExamCorrection.ipynb')
+#    assert errors == []
