@@ -7,7 +7,7 @@ script: py.test tests.py
 install: pip install lorem jupyter beautifulsoup4 lxml pandas  \
                      progressbar2 dask toolz pandas_datareader \
                      tables cloudpickle toyplot xlwt pyspark   \
-                     fastparquet pyarrow
+                     fastparquet pyarrow matplotlib
 
 cache: pip
 cache: ccache
