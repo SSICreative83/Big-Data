@@ -1,0 +1,38 @@
+name: big-data
+channels:
+  - damianavila82
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.6
+  - autopep8
+  - beautifulsoup4 
+  - cloudpickle 
+  - dask 
+  - distributed
+  - fastparquet 
+  - feather-format
+  - graphviz
+  - h5py
+  - hdfs3
+  - joblib
+  - jupyter 
+  - jupyter_contrib_nbextensions
+  - lorem 
+  - lxml 
+  - matplotlib
+  - pandas 
+  - pandas_datareader
+  - partd
+  - progressbar2 
+  - pyarrow 
+  - pytables
+  - python-graphviz
+  - pyspark 
+  - rise
+  - seaborn
+  - tables 
+  - toolz 
+  - toyplot 
+  - ujson
+  - xlwt 
